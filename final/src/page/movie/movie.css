@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+.movie{
+    background-color: #1E1E1F;
+    font-family: 'Courier Prime', monospace;
+}
+.movieSection {
+    text-align: center;
+}
+.movie input{
+    width: 300px;
+}
+.element{
+    margin-block: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    color: white;
+  }
+  .element-div img {
+    max-width: 250px;
+    border-radius: 20px;
+  }
+  
+  .element-div{
+    height: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 9px 64px 314px 29px rgba(0,0,0,0.68);
+-webkit-box-shadow: 9px 64px 314px 29px rgba(0,0,0,0.68);
+-moz-box-shadow: 9px 64px 314px 29px rgba(0,0,0,0.68);
+    border-radius: 20px;
+ }
+ .image{
+    position: relative;
+  }
+  
+  .image_img{
+    display: block;
+    width: 100%;
+  }
+  .image_overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-family:'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+  }
+  
+  .image_overlay > *{
+    transform: translate(20px) ;
+    transition: transform 0.25s;
+  }
+  
+  .image_overlay:hover{
+    opacity: 1;
+  }
+  .image_overlay:hover > *{
+    transform: translateY(0) ;
+  }
+  
+  .image_title{
+    font-size: 1.4em;
+    font-weight: bolder;
+  }
+  
+  .image_description{
+    font-size:1.25em;
+    margin-top: 0.25em;
+  }
+  

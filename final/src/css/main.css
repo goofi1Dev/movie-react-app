@@ -1,0 +1,20 @@
+.badge-info{
+    display: flex;
+    justify-content: space-evenly;
+}
+.border-2 {
+    font-family: serif;
+    font-size: 70px;
+    padding: 100px;
+}
+.badge-info h3{
+    font-size: 17px;
+    text-align:start;
+}
+.badge-info img{
+    border-radius: 50% 20% / 10% 40%;
+}
+section{
+    background-color: white;
+    color: #1E1E1F;
+}

@@ -1,0 +1,10 @@
+.badge-success{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color:#1E1E1F;
+}
+.alert{
+    margin-bottom:0px;
+}

@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+}
+.banner{
+    
+    position: absolute;
+    top: 15%;
+    right: 35%;
+}
+.Spline_1 img{
+    width: 100%;
+}
+.banner h1{
+    text-align: right;
+    font-size: 72px;
+    background: -webkit-linear-gradient(#eee, #bcc3be,rgb(155, 206, 155) );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+input{
+    margin: 10px;
+    background: none;
+    border: none;
+    outline: none;
+   
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 9999px;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    color: #fff;
+}
+span{
+    color: #fff;
+    margin-right: 10px;
+    font-size: 15px;
+}
+.cta {
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+    padding: 10px 10px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+   }
+   
+   .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+   }
+   
+   .cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+   }
+   
+   .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+   }
+   
+   .cta:hover:before {
+    width: 100%;
+    background: #b1dae7;
+   }
+   
+   .cta:hover svg {
+    transform: translateX(0);
+   }
+   
+   .cta:active {
+    transform: scale(0.95);
+   }
+   .video video{
+    position: absolute;
+    top: 20%;
+    right: 4%;
+    border-radius: 20px;
+   }
+   .bar{
+    background-color: #1E1E1F;
+}
