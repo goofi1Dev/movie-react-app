@@ -11,7 +11,7 @@
     width: 300px;
 }
 .element{
-    margin-block: 2rem;
+   
     display: grid;
     grid-template-columns: repeat(4,1fr);
     align-items: center;

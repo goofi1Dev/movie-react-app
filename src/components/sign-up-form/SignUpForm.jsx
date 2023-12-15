@@ -58,7 +58,11 @@ const SignUpForm = () => {
                   }));
                 }}
                 name="userName"
-                placeholder="Enter your Username"
+                title="Enter max 10 simbols min 3"
+                placeholder="Enter your User Name"
+                pattern="^[a-zA-Z0-9_]{3,10}$"
+                type="text"
+                required
               />
             </div>
             <div>
@@ -70,7 +74,11 @@ const SignUpForm = () => {
                   }));
                 }}
                 name="email"
-                placeholder="Enter your email"
+                type="email"
+                title="Enter your email"
+                placeholder="Enter your mail"
+                pattern="^[\w.-]+@[a-zA-Z_-]+?(?:\.[a-zA-Z]{2,6})+$"
+                required
               />
             </div>
             <div>
@@ -82,7 +90,11 @@ const SignUpForm = () => {
                   }));
                 }}
                 name="password"
-                placeholder="Enter your password"
+                type="password"
+                title="you mast have max 10 simbol use big and smole letters "
+                placeholder="Enter  password"
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}$"
+                required
               />
             </div>
             <div>

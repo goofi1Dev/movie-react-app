@@ -42,7 +42,10 @@ const SignInForm = () => {
             setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
           }}
           name="userName"
-          placeholder="Enter your Username"
+          title="Enter max 10 simbols min 3"
+          placeholder="Enter your  Name"
+          pattern="^[a-zA-Z0-9_]{3,10}$"
+          required
         />
       </div>
       <div>
@@ -51,7 +54,10 @@ const SignInForm = () => {
             setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
           }}
           name="password"
+          title="you mast have max 10 simbol use big and smole letters "
           placeholder="Enter your password"
+          pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}$"
+          required
         />
       </div>
       <div>

@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./movie.css";
+import Alert from "react-bootstrap/Alert";
 
 function Movie() {
   const [endPoint, setEndPoint] = useState("");
   const [conteiner, setConteiner] = useState([]);
   // console.log(conteiner);
   const [finalPoint, setFinalPoint] = useState("");
+  const [userSearchError, setuserSearchError] = useState(false);
+  console.log(userSearchError);
 
   useEffect(() => {
     fetchMovie();
@@ -26,7 +29,7 @@ function Movie() {
         setConteiner(data.d);
       })
       .catch((error) => {
-        console.log(error);
+        setuserSearchError(error);
       });
   };
   const onChangeHandler = (e) => {
@@ -54,28 +57,40 @@ function Movie() {
             </button>
           </form>
 
-          <div className="element">
-            {conteiner.map((item, index) => {
-              return (
-                <div key={index} className="element-div">
-                  <div className="image box">
-                    <img
-                      className="image_img"
-                      src={item.i.imageUrl}
-                      alt={item.id}
-                    />
-                    <div className="image_overlay">
-                      <span>ACTORS:</span>
-                      <div className="image_title">{item.s} </div>
-                      <p className="image_description">{item.y}</p>
+          {userSearchError ? (
+            <div className="element">
+              {conteiner.map((item, index) => {
+                return (
+                  <div key={index} className="element-div">
+                    <div className="image box">
+                      <img
+                        className="image_img"
+                        src={item.i.imageUrl}
+                        alt={item.id}
+                      />
+                      <div className="image_overlay">
+                        <span>ACTORS:</span>
+                        <div className="image_title">{item.s} </div>
+                        <p className="image_description">{item.y}</p>
+                      </div>
                     </div>
+                    <h1>GANRE: {item.q} </h1>
+                    <h1>{item.yr} </h1>
                   </div>
-                  <h1>GANRE: {item.q} </h1>
-                  <h1>{item.yr} </h1>
-                </div>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="element">
+              {["danger"].map((variant) => {
+                return (
+                  <Alert key={variant} variant={variant}>
+                    This movie {endPoint} con't be found !
+                  </Alert>
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
     </section>
